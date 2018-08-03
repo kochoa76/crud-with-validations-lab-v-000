@@ -15,20 +15,19 @@
     </tr>
   </thead>
 
-  <tbody> 
+  <tbody>
     <% @songs.each do |song| %>
-      <tr> 
+      <tr>
         <td><%= song.title %><td>
-        <td><%= song.release_year %></td> 
-        <td><%= song.genre %></td> 
-        <td><%= song.artist_name %></td> 
-        <td> 
+        <td><%= song.release_year %></td>
+        <td><%= song.genre %></td>
+        <td><%= song.artist_name %></td>
+        <td>
           <%= link_to "Show", song_path(song) %>
           <%= link_to "Edit", edit_song_path(song) %>
-          <%= link_to "Delete", song, method: :delete, data: { confirm: "Really?" } %> 
-        </td> 
-      </tr> 
+          <%= link_to "Delete", song, method: :delete, data: { confirm: "Really?" } %>
+        </td>
+      </tr>
       <%end%>
-    </tbody> 
+    </tbody>
   </table> 
-    
